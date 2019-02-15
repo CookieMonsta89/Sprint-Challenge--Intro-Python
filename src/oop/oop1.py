@@ -19,15 +19,29 @@ class Starship(FlightVehicle):
         super().__init__(self, name, 2044)      #         <===== SUBCLASS to SUBCLASS => FLIGHTVEHICLE
 
 
-class Airplane(FlightVehicle):
+class Airplane(FlightVehicle):                  #          <===== SUBCLASS to SUBCLASS => FLIGHTVEHICLE 
     def __init__(self, name):
         super().__init__(self, name, 1902)
 # [GroundVehicle]      [Airplane]
 #   |       |
 #   v       v
 # [Car]  [Motorcycle]
-class GroundVehicle:
+class GroundVehicle(Vehicle):                   #          <===== SUBCLASS to SUBCLASS => VEHICLE 
     def __init__(self, name, wheels):
+        super().__init__(name)
+        self.wheels = wheels
+
+class Car(GroundVehicle):                   #          <===== SUBCLASS to SUBCLASS => GROUNDVEHICLE
+    def __init__(self, name):
+        super().__init__(name, 4)
+       
+
+class Motorcycle(GroundVehicle):                   #          <===== SUBCLASS to SUBCLASS => GROUNDVEHICLE
+    def __init__(self, name):
+        super().__init__(name, 2)
+        
+
+
 
 #
 # Each class can simply "pass" for its body. The exercise is about setting up

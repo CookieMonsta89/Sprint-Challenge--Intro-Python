@@ -9,7 +9,7 @@ class Vehicle:                       #    <===== BASE CLASS
         self.name = name
 
 class FlightVehicle(Vehicle):        #    <===== SUBCLASS to BASE CLASS => VEHICLE
-    def __init__(self, name, year_built):
+    def __init__(self, name, year_built = 0):
         super().__init__(name, 1943)
         self.year_built = year_built
 
@@ -27,7 +27,7 @@ class Airplane(FlightVehicle):                  #          <===== SUBCLASS to SU
 #   v       v
 # [Car]  [Motorcycle]
 class GroundVehicle(Vehicle):                   #          <===== SUBCLASS to SUBCLASS => VEHICLE 
-    def __init__(self, name, wheels):
+    def __init__(self, name, wheels = 4):
         super().__init__(name)
         self.wheels = wheels
 
@@ -53,3 +53,5 @@ class Motorcycle(GroundVehicle):                   #          <===== SUBCLASS to
 #     pass
 #
 # Put a comment noting which class is the base class
+
+#############################################################################> DIDN"T REALIZE I COULD HAVE JUST PASSED IN THE BODY <#############################################################################

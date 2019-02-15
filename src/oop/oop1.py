@@ -9,7 +9,7 @@ class Vehicle:                       #    <===== BASE CLASS
         self.name = name
         self.type = level 
 
-class FlightVehicle(Vehicle):        #    <===== SUBCLASS to VEHICLE
+class FlightVehicle(Vehicle):        #    <===== SUBCLASS to BASE CLASS => VEHICLE
     def __init__(self):
         super().__init__(name, level)
 # [GroundVehicle]      [Airplane]

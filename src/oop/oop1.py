@@ -3,6 +3,15 @@
 #  [Vehicle]->[FlightVehicle]->[Starship]
 #      |                |
 #      v                v
+
+class Vehicle:                       #    <===== BASE CLASS
+    def __init__(self, name, level):
+        self.name = name
+        self.type = level 
+
+class FlightVehicle(Vehicle):        #    <===== SUBCLASS to VEHICLE
+    def __init__(self):
+        super().__init__(name, level)
 # [GroundVehicle]      [Airplane]
 #   |       |
 #   v       v
